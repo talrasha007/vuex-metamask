@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/talrasha007/vuex-metamask/issues"
   },
-  "homepage": "https://github.com/talrasha007/vuex-metamask#readme"
+  "homepage": "https://github.com/talrasha007/vuex-metamask#readme",
+  "dependencies": {
+    "@0x/web3-wrapper": "^6.0.13"
+  }
 }

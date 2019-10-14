@@ -13,9 +13,13 @@ export default {
   state: {
     state: null,
     error: null,
+    networkId: null,
     account: null
   },
   mutations: {
+    setNetworkId(state, network) {
+      state.networkId = network;
+    },
     setAccount(state, acc) {
       state.account = acc;
     },
@@ -41,6 +45,7 @@ export default {
         if (networkRequired && networkId !== networkRequired)
           return ctx.commit('setError', STATE.WRONG_NETWORK);
 
+        ctx.commit('setNetworkId', networkId);
         ctx.commit('setAccount', accounts[0]);
         ctx.commit('setState', STATE.CONNECTED);
       } catch (e) {
